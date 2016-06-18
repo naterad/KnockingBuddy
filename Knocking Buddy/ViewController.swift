@@ -147,11 +147,15 @@ class ViewController: UIViewController {
         //-------------When you've hit your goal!---------------
         
         if timeWorked >= timeWorkedGoal {
-            timeWorkedBox.layer.borderColor = UIColor.greenColor().CGColor
+            //timeWorkedBox.layer.borderColor = UIColor.greenColor().CGColor
+            
+            timeWorkedBox.backgroundColor = UIColor(red: 57/255, green: 181/255, blue: 74/255, alpha: 0.2)
         }
         
         if sales >= salesGoal {
-        salesBox.layer.borderColor = UIColor.greenColor().CGColor
+        //salesBox.layer.borderColor = UIColor.greenColor().CGColor
+            
+            salesBox.backgroundColor = UIColor(red: 57/255, green: 181/255, blue: 74/255, alpha: 0.2)
         }
 
     }

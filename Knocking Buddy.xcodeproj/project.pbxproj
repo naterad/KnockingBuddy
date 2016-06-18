@@ -16,6 +16,9 @@
 		E23DD4AF1D0BE1440036A5C3 /* Knocking_BuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23DD4AE1D0BE1440036A5C3 /* Knocking_BuddyUITests.swift */; };
 		E23DD4BD1D0C71CE0036A5C3 /* Fist-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E23DD4BC1D0C71CE0036A5C3 /* Fist-Icon.png */; };
 		E23DD4BF1D0E34BD0036A5C3 /* fist-icon-mini.png in Resources */ = {isa = PBXBuildFile; fileRef = E23DD4BE1D0E34BD0036A5C3 /* fist-icon-mini.png */; };
+		E2DC674F1D15B2BB0084DD43 /* unlock-with-pro.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DC674E1D15B2BB0084DD43 /* unlock-with-pro.png */; };
+		E2DC67511D15B36B0084DD43 /* unlock-with-pro-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DC67501D15B36B0084DD43 /* unlock-with-pro-gray.png */; };
+		E2DC67531D15B4450084DD43 /* unlock-with-pro-regular.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DC67521D15B4450084DD43 /* unlock-with-pro-regular.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		E23DD4B01D0BE1440036A5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E23DD4BC1D0C71CE0036A5C3 /* Fist-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fist-Icon.png"; sourceTree = "<group>"; };
 		E23DD4BE1D0E34BD0036A5C3 /* fist-icon-mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fist-icon-mini.png"; sourceTree = "<group>"; };
+		E2DC674E1D15B2BB0084DD43 /* unlock-with-pro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unlock-with-pro.png"; sourceTree = "<group>"; };
+		E2DC67501D15B36B0084DD43 /* unlock-with-pro-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unlock-with-pro-gray.png"; sourceTree = "<group>"; };
+		E2DC67521D15B4450084DD43 /* unlock-with-pro-regular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unlock-with-pro-regular.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,9 @@
 				E23DD48E1D0BE1440036A5C3 /* AppDelegate.swift */,
 				E23DD4901D0BE1440036A5C3 /* ViewController.swift */,
 				E23DD4921D0BE1440036A5C3 /* Main.storyboard */,
+				E2DC67521D15B4450084DD43 /* unlock-with-pro-regular.png */,
+				E2DC67501D15B36B0084DD43 /* unlock-with-pro-gray.png */,
+				E2DC674E1D15B2BB0084DD43 /* unlock-with-pro.png */,
 				E23DD4BE1D0E34BD0036A5C3 /* fist-icon-mini.png */,
 				E23DD4BC1D0C71CE0036A5C3 /* Fist-Icon.png */,
 				E23DD4951D0BE1440036A5C3 /* Assets.xcassets */,
@@ -235,11 +244,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2DC67531D15B4450084DD43 /* unlock-with-pro-regular.png in Resources */,
 				E23DD4BD1D0C71CE0036A5C3 /* Fist-Icon.png in Resources */,
 				E23DD4991D0BE1440036A5C3 /* LaunchScreen.storyboard in Resources */,
 				E23DD4BF1D0E34BD0036A5C3 /* fist-icon-mini.png in Resources */,
+				E2DC67511D15B36B0084DD43 /* unlock-with-pro-gray.png in Resources */,
 				E23DD4961D0BE1440036A5C3 /* Assets.xcassets in Resources */,
 				E23DD4941D0BE1440036A5C3 /* Main.storyboard in Resources */,
+				E2DC674F1D15B2BB0084DD43 /* unlock-with-pro.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +504,7 @@
 				E23DD4B51D0BE1440036A5C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E23DD4B61D0BE1440036A5C3 /* Build configuration list for PBXNativeTarget "Knocking BuddyTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +513,7 @@
 				E23DD4B81D0BE1440036A5C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E23DD4B91D0BE1440036A5C3 /* Build configuration list for PBXNativeTarget "Knocking BuddyUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +522,7 @@
 				E23DD4BB1D0BE1440036A5C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
