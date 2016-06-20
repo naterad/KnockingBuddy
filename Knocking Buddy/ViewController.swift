@@ -18,8 +18,8 @@ class ViewController: UIViewController {
     var salesComparedToGoal = 0.33
     var doorsComparedToGoal = 0.06
     
-    
-    
+    var salesInfo: [String: Array<String>] = [:]
+    var daysInfo: [String: Array<Int>] = [:] // [Distance, Hours, Sales, Doors]
     
     
     @IBOutlet weak var doorsKnockedBox: UILabel!
@@ -293,7 +293,30 @@ class ViewController: UIViewController {
             minusOneSale.hidden = false
         }
         
-    
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Month, .Year, .Day, .Hour, .Minute, .Second], fromDate: date)
+        let day = components.day
+        let year = components.year
+        let month = components.month
+        let hour = components.hour
+        let minutes = components.minute
+        let seconds = components.second
+        let dateString = "\(month)\\\(day)\\\(year)"
+        let timeString = "\(hour):\(minutes):\(seconds)"
+        
+        if salesInfo[dateString] == nil {
+            var salesList: [String] = []
+            salesList.append(timeString)
+            salesInfo[dateString] = salesList
+        }else{
+            var salesList: [String] = salesInfo[dateString]!
+            salesList.append(timeString)
+            salesInfo[dateString] = salesList
+        }
+        
+        printSales()
+        printDaysInfo()
     }
     
     @IBAction func minusOneSale(sender: AnyObject) {
@@ -330,6 +353,7 @@ class ViewController: UIViewController {
         distanceWalkedBox.layer.borderWidth = 0.5
         distanceWalkedBox.layer.borderColor = UIColor.lightGrayColor().CGColor
         distanceWalkedBox.layer.cornerRadius = 2
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -337,6 +361,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //----------Nates Testing Stuff---------
+    
+    func printSales(){
+        for (key, value) in salesInfo {
+            print("\(key): \(value)")
+        }
+    }
+    func printDaysInfo(){
+        for (key, value) in daysInfo {
+            print("\(key): \(value)")
+        }
+    }
     
     
     
@@ -352,7 +388,7 @@ class ViewController: UIViewController {
     func timerResults(timer: NSTimer) {
         let timerStartDate = timer.userInfo as! NSDate
         let second = Double(NSDate().timeIntervalSinceDate(timerStartDate))
-        print(second)
+        //print(second)
         
         
         doughnutWidth = Int(doorsKnockedBox.frame.width) - 10
@@ -436,12 +472,25 @@ class ViewController: UIViewController {
         
         var date = NSDate()
         
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Month, .Year, .Day, .Hour, .Minute, .Second], fromDate: date)
+        let day = components.day
+        let year = components.year
+        let month = components.month
+        let dateString = "\(month)\\\(day)\\\(year)"
         
         if updatingSymbol.hidden == true { //Start the timer
             sender.setTitle("STOP", forState: UIControlState.Normal)
             updatingSymbol.hidden = false
             
             timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.timerResults(_:)) , userInfo: NSDate(), repeats: true)
+            
+            if daysInfo[dateString] == nil {
+                //reset everything to 0
+                // [Distance, Hours, Sales, Doors]
+                let daysList: [Int] = [0,0,0,0]
+                daysInfo[dateString] = daysList
+            }
             
         } else { //Stop the timer
             sender.setTitle("START", forState: UIControlState.Normal)
@@ -450,12 +499,4 @@ class ViewController: UIViewController {
             timer.invalidate()
         }
     }
-    
-    
-
-    
-    
-    
-    
-
 }
