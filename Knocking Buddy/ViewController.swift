@@ -14,6 +14,12 @@ class ViewController: UIViewController {
     var sales = 0
     var salesGoal = 2
     var timeWorkedGoal = 0.01
+    var doughnutWidth = 150
+    var salesComparedToGoal = 0.33
+    var doorsComparedToGoal = 0.06
+    
+    
+    
     
     
     @IBOutlet weak var doorsKnockedBox: UILabel!
@@ -28,6 +34,254 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var timeWorkedLabel: UILabel!
     @IBOutlet weak var timeWorkedGoalNumber: UILabel!
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //---------------------Circle graphs------------------------
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //----Doors Knocked--------
+    
+    class DoorsKnockedCircleViewBackground: UIView {
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.backgroundColor = UIColor.clearColor()
+            
+            // Use UIBezierPath as an easy way to create the CGPath for the layer.
+            // The path should be the entire circle.
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            
+            // Setup the CAShapeLayer with the path, colors, and line width
+            
+            let circleLayer: CAShapeLayer!
+            
+            
+            circleLayer = CAShapeLayer()
+            circleLayer.path = circlePath.CGPath
+            circleLayer.fillColor = UIColor.clearColor().CGColor
+            circleLayer.strokeColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1.0).CGColor
+            circleLayer.lineWidth = 5.0;
+            
+            // Don't draw the circle initially
+            circleLayer.strokeEnd = 1.0
+            
+            // Add the circleLayer to the view's layer's sublayers
+            layer.addSublayer(circleLayer)
+        }
+        
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+            
+            
+        }
+        
+    }
+    
+    
+    func addDoorsKnockedCircleViewBackground() {
+        let diceRoll = CGFloat(Int(arc4random_uniform(7))*50)
+        let circleWidth = CGFloat(200)
+        let circleHeight = circleWidth
+        // Create a new CircleView
+        //var circleView = CircleView(frame: CGRectMake(diceRoll, 0, circleWidth, circleHeight))
+        let circleView = DoorsKnockedCircleViewBackground(frame: CGRectMake((doorsKnockedBox.frame.origin.x + 5), (doorsKnockedBox.frame.origin.y + 30), CGFloat(doughnutWidth), CGFloat(doughnutWidth)))
+        
+        view.addSubview(circleView)
+    }
+    
+    
+    
+    
+    
+    
+    class DoorsKnockedCircleView: UIView {
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.backgroundColor = UIColor.clearColor()
+            
+            // Use UIBezierPath as an easy way to create the CGPath for the layer.
+            // The path should be the entire circle.
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            
+            // Setup the CAShapeLayer with the path, colors, and line width
+            
+            let circleLayer: CAShapeLayer!
+
+            
+            circleLayer = CAShapeLayer()
+            circleLayer.path = circlePath.CGPath
+            circleLayer.fillColor = UIColor.clearColor().CGColor
+            circleLayer.strokeColor = UIColor(red: 57/255, green: 181/255, blue: 74/255, alpha: 1.0).CGColor
+            circleLayer.lineWidth = 5.0;
+            
+            // Don't draw the circle initially
+            circleLayer.strokeEnd = 0.3
+            
+            // Add the circleLayer to the view's layer's sublayers
+            layer.addSublayer(circleLayer)
+        }
+        
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+            
+            
+        }
+
+    }
+    
+    
+    func addDoorsKnockedCircleView() {
+        let diceRoll = CGFloat(Int(arc4random_uniform(7))*50)
+        let circleWidth = CGFloat(200)
+        let circleHeight = circleWidth
+        // Create a new CircleView
+        //var circleView = CircleView(frame: CGRectMake(diceRoll, 0, circleWidth, circleHeight))
+        let circleView = DoorsKnockedCircleView(frame: CGRectMake((doorsKnockedBox.frame.origin.x + 5), (doorsKnockedBox.frame.origin.y + 30), CGFloat(doughnutWidth), CGFloat(doughnutWidth)))
+        
+        view.addSubview(circleView)
+    }
+    
+    
+    
+    
+    //-----Sales--------
+    
+    
+    class salesCircleViewBackground: UIView {
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.backgroundColor = UIColor.clearColor()
+            
+            // Use UIBezierPath as an easy way to create the CGPath for the layer.
+            // The path should be the entire circle.
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            
+            // Setup the CAShapeLayer with the path, colors, and line width
+            
+            let circleLayer: CAShapeLayer!
+            
+            
+            circleLayer = CAShapeLayer()
+            circleLayer.path = circlePath.CGPath
+            circleLayer.fillColor = UIColor.clearColor().CGColor
+            circleLayer.strokeColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1.0).CGColor
+            circleLayer.lineWidth = 5.0;
+            
+            // Don't draw the circle initially
+            circleLayer.strokeEnd = 1.0
+            
+            // Add the circleLayer to the view's layer's sublayers
+            layer.addSublayer(circleLayer)
+        }
+        
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+            
+            
+        }
+        
+    }
+    
+    
+    func addSalesCircleViewBackground() {
+        let diceRoll = CGFloat(Int(arc4random_uniform(7))*50)
+        let circleWidth = CGFloat(200)
+        let circleHeight = circleWidth
+        // Create a new CircleView
+        //var circleView = CircleView(frame: CGRectMake(diceRoll, 0, circleWidth, circleHeight))
+        let circleView = salesCircleViewBackground(frame: CGRectMake((salesBox.frame.origin.x + 5), (salesBox.frame.origin.y + 30), CGFloat(doughnutWidth), CGFloat(doughnutWidth)))
+        
+        view.addSubview(circleView)
+    }
+    
+    
+    
+    
+    
+    
+    class salesCircleView: UIView {
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.backgroundColor = UIColor.clearColor()
+            
+            // Use UIBezierPath as an easy way to create the CGPath for the layer.
+            // The path should be the entire circle.
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            
+            // Setup the CAShapeLayer with the path, colors, and line width
+            
+            let circleLayer: CAShapeLayer!
+            
+            
+            circleLayer = CAShapeLayer()
+            circleLayer.path = circlePath.CGPath
+            circleLayer.fillColor = UIColor.clearColor().CGColor
+            circleLayer.strokeColor = UIColor(red: 0/255, green: 157/255, blue: 167/255, alpha: 1.0).CGColor
+            circleLayer.lineWidth = 5.0;
+            
+            // Don't draw the circle initially
+            circleLayer.strokeEnd = 0.2
+            
+            
+            // Add the circleLayer to the view's layer's sublayers
+            layer.addSublayer(circleLayer)
+        }
+        
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+            
+            
+        }
+        
+    }
+    
+    
+    func addSalesCircleView() {
+        let diceRoll = CGFloat(Int(arc4random_uniform(7))*50)
+        let circleWidth = CGFloat(200)
+        let circleHeight = circleWidth
+        // Create a new CircleView
+        //var circleView = CircleView(frame: CGRectMake(diceRoll, 0, circleWidth, circleHeight))
+        let circleView = salesCircleView(frame: CGRectMake((salesBox.frame.origin.x + 5), (salesBox.frame.origin.y + 30), CGFloat(doughnutWidth), CGFloat(doughnutWidth)))
+        
+        view.addSubview(circleView)
+    }
+
+    
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //--------------------------------------------------
     
 
     
@@ -59,6 +313,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
         doorsKnockedBox.layer.borderWidth = 0.5
         doorsKnockedBox.layer.borderColor = UIColor.lightGrayColor().CGColor
         doorsKnockedBox.layer.cornerRadius = 2
@@ -84,7 +340,7 @@ class ViewController: UIViewController {
     
     
     
-    //----------Timer Stuff------
+    //----------Timer Stuff--------------------
     
     
     func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
@@ -99,6 +355,12 @@ class ViewController: UIViewController {
         print(second)
         
         
+        doughnutWidth = Int(doorsKnockedBox.frame.width) - 10
+        addDoorsKnockedCircleViewBackground()
+        addDoorsKnockedCircleView()
+        addSalesCircleViewBackground()
+        addSalesCircleView()
+
         
         //second += 1
         
@@ -157,6 +419,14 @@ class ViewController: UIViewController {
             
             salesBox.backgroundColor = UIColor(red: 57/255, green: 181/255, blue: 74/255, alpha: 0.2)
         }
+        
+        
+        if sales < salesGoal {
+            //salesBox.layer.borderColor = UIColor.greenColor().CGColor
+            
+            salesBox.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        }
+
 
     }
     
@@ -180,10 +450,9 @@ class ViewController: UIViewController {
             timer.invalidate()
         }
     }
+    
+    
 
-    
-    
-    
     
     
     

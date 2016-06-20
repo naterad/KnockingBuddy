@@ -1,0 +1,829 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E4247F782B00E0C8A4EFA4FB69BAAA0 /* CircleSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB21DB03F3DED8ECB80EC9EDCC6A74D /* CircleSlider-dummy.m */; };
+		2846775AE4B851EEE4075F1FF4CD5569 /* Pods-Knocking BuddyTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6515950AA01133611119B566771119C5 /* Pods-Knocking BuddyTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B625D9FF7A04797486C96A9F7D01560 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		2CDCBD01E34DD403BA52DE2BE7AEB33A /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7662E06A3CF7275612583C1BD30D02F /* Math.swift */; };
+		40CE73B54FE02549F6D96B38320168BB /* Pods-Knocking Buddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41167A4DBAE9DC01EC0108BE4459C2A8 /* Pods-Knocking Buddy-dummy.m */; };
+		52AA8A18B25CC7793C6EDE7AE1895189 /* CircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DAD9D05E1F6543F1184D184659EA07 /* CircleSlider.swift */; };
+		7C52877DE87B06A16FFC266872E94CDC /* Pods-Knocking BuddyTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8E0B1BFE705EC8B578204A8A50D7D4 /* Pods-Knocking BuddyTests-dummy.m */; };
+		965688DD751C7326F5D3D14DFCBF1A2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		993DF44138AA56E195BF57614240F11F /* CircleSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 44E8ABAE002393F407D69DB697401B91 /* CircleSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D84B720452ED3338A13544DB35A1A8C /* Pods-Knocking Buddy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A60A5B0AEF0EAA6A81757E4723AAADA5 /* Pods-Knocking Buddy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6A5A850521A38D308EF40FCF6E57068 /* Pods-Knocking BuddyUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C187DB9DF1EE8D045F597559CDBE4F61 /* Pods-Knocking BuddyUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB47D8E50285B8F9EBEBF9678FA3B626 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		BE28949EEF950917F8B6F9970C69CFA9 /* Pods-Knocking BuddyUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBD6BC342F0E948C1648BEBB47B718 /* Pods-Knocking BuddyUITests-dummy.m */; };
+		D6E598C52C4DBBEE2FDA5D88BFB337D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		DF5B208728F7848D3C2EDCAB75284978 /* TrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6204E64AE2F11111C42E846325DDDF52 /* TrackLayer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A43E9FDF51DC4608ABF243CE052DE590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ED1961DDCDE947A06DC8C16287018D5;
+			remoteInfo = CircleSlider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0CC18A761B477367A37CC2B3860EE546 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F94EC9A40778C9DA437F3A1586BB66F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13D40FE8B67AADF43E8677B8E7C3E42D /* Pods-Knocking BuddyTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Knocking BuddyTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		16734A4C9CF833EE06591ED2B34B4372 /* Pods-Knocking BuddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Knocking BuddyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2917367D3D05E19FC00522CDFAA309B7 /* CircleSlider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircleSlider.xcconfig; sourceTree = "<group>"; };
+		302BA98AE676BCB120F99F9CAE906592 /* Pods-Knocking BuddyUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Knocking BuddyUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3ABBD6BC342F0E948C1648BEBB47B718 /* Pods-Knocking BuddyUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Knocking BuddyUITests-dummy.m"; sourceTree = "<group>"; };
+		3ACF10F34CBF58D1227A0EA552CB797B /* Pods-Knocking BuddyTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Knocking BuddyTests-frameworks.sh"; sourceTree = "<group>"; };
+		3BF41D1D6F8293A4B3FCAF7414B10785 /* Pods-Knocking Buddy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Knocking Buddy-acknowledgements.markdown"; sourceTree = "<group>"; };
+		41167A4DBAE9DC01EC0108BE4459C2A8 /* Pods-Knocking Buddy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Knocking Buddy-dummy.m"; sourceTree = "<group>"; };
+		42D03034D13A55FB9AF2B99B3B961294 /* Pods-Knocking Buddy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Knocking Buddy-frameworks.sh"; sourceTree = "<group>"; };
+		44E8ABAE002393F407D69DB697401B91 /* CircleSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleSlider-umbrella.h"; sourceTree = "<group>"; };
+		498AA89380F03551DC4B25F874B92F4B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		591AC5E77D48596FC83A2B3E63567398 /* Pods-Knocking BuddyUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Knocking BuddyUITests.modulemap"; sourceTree = "<group>"; };
+		5BD095AA9C0DAEE38DC60C3416185F93 /* Pods-Knocking Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Knocking Buddy.debug.xcconfig"; sourceTree = "<group>"; };
+		6204E64AE2F11111C42E846325DDDF52 /* TrackLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrackLayer.swift; path = Pod/Classes/TrackLayer.swift; sourceTree = "<group>"; };
+		6500D01FBA715FA7B3D52CEA67E09B0C /* Pods-Knocking BuddyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Knocking BuddyTests.modulemap"; sourceTree = "<group>"; };
+		6515950AA01133611119B566771119C5 /* Pods-Knocking BuddyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Knocking BuddyTests-umbrella.h"; sourceTree = "<group>"; };
+		68C09C167C85D384389802858CDFE014 /* Pods-Knocking BuddyTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Knocking BuddyTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6A73E95AFA0668BF961A6A7EEBF6F47D /* Pods-Knocking BuddyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Knocking BuddyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		70E4EAC6FD8DB5FF3188C947FEBBEEAC /* Pods-Knocking BuddyUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Knocking BuddyUITests-frameworks.sh"; sourceTree = "<group>"; };
+		73374AB4BEB0A77C36D11F97113DA4AA /* Pods-Knocking Buddy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Knocking Buddy.modulemap"; sourceTree = "<group>"; };
+		74360D66C2AFAB7A4653175ED1CC129A /* Pods-Knocking BuddyTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Knocking BuddyTests-resources.sh"; sourceTree = "<group>"; };
+		7AB21DB03F3DED8ECB80EC9EDCC6A74D /* CircleSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircleSlider-dummy.m"; sourceTree = "<group>"; };
+		8660DC704F57CF6FD159AB113FC93C2A /* CircleSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CircleSlider.modulemap; sourceTree = "<group>"; };
+		91AD9B626C9AD4C43D060676CA94208F /* Pods_Knocking_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Knocking_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9418B2519F25D4E92CB745EEA451357A /* Pods-Knocking BuddyUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Knocking BuddyUITests-resources.sh"; sourceTree = "<group>"; };
+		9518FD20A17D739AF7A59A5B3486ADDA /* Pods-Knocking BuddyUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Knocking BuddyUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9F2B63FA9BAD5E4CE4D3608B934B38C2 /* Pods_Knocking_BuddyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Knocking_BuddyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DAD9D05E1F6543F1184D184659EA07 /* CircleSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleSlider.swift; path = Pod/Classes/CircleSlider.swift; sourceTree = "<group>"; };
+		A60A5B0AEF0EAA6A81757E4723AAADA5 /* Pods-Knocking Buddy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Knocking Buddy-umbrella.h"; sourceTree = "<group>"; };
+		B2C159E905E87202AC84DA9FB1BC5060 /* Pods-Knocking Buddy-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Knocking Buddy-resources.sh"; sourceTree = "<group>"; };
+		BC0487A9437A10C5FEF6379071D4546A /* Pods-Knocking BuddyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Knocking BuddyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C187DB9DF1EE8D045F597559CDBE4F61 /* Pods-Knocking BuddyUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Knocking BuddyUITests-umbrella.h"; sourceTree = "<group>"; };
+		C6A6A44CCFCC8F325876FF3CD76C8401 /* CircleSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CircleSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D4C93CEF17722827FB1B983E0C0AD141 /* Pods-Knocking Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Knocking Buddy.release.xcconfig"; sourceTree = "<group>"; };
+		D7662E06A3CF7275612583C1BD30D02F /* Math.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Math.swift; path = Pod/Classes/Math.swift; sourceTree = "<group>"; };
+		D994FEA8D133D803DF835207542D5E63 /* Pods_Knocking_BuddyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Knocking_BuddyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED8E0B1BFE705EC8B578204A8A50D7D4 /* Pods-Knocking BuddyTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Knocking BuddyTests-dummy.m"; sourceTree = "<group>"; };
+		F1E06539ED7869AE7A7D5C708335133A /* Pods-Knocking BuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Knocking BuddyTests.release.xcconfig"; sourceTree = "<group>"; };
+		F3DCB2FCB7B6B4523F50C669BC706BF6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB5331BC31B11F67385F0DA0F51D600C /* Pods-Knocking Buddy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Knocking Buddy-acknowledgements.plist"; sourceTree = "<group>"; };
+		FC2366498053F775256A610DEFBE28F0 /* CircleSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleSlider-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33AFE01BB588E68454EC4588FA5EB3C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E598C52C4DBBEE2FDA5D88BFB337D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AF8E9A0DF4E4BA1104892A83771AD65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B625D9FF7A04797486C96A9F7D01560 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E06C8EFBD5132CC3AF76A81DF7443B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				965688DD751C7326F5D3D14DFCBF1A2C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B251B68B9AA2D12F8DCA3FD4D09E22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB47D8E50285B8F9EBEBF9678FA3B626 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A12A0118120C8AB0E6F40BFB9B19E44 /* Pods-Knocking Buddy */ = {
+			isa = PBXGroup;
+			children = (
+				498AA89380F03551DC4B25F874B92F4B /* Info.plist */,
+				73374AB4BEB0A77C36D11F97113DA4AA /* Pods-Knocking Buddy.modulemap */,
+				3BF41D1D6F8293A4B3FCAF7414B10785 /* Pods-Knocking Buddy-acknowledgements.markdown */,
+				FB5331BC31B11F67385F0DA0F51D600C /* Pods-Knocking Buddy-acknowledgements.plist */,
+				41167A4DBAE9DC01EC0108BE4459C2A8 /* Pods-Knocking Buddy-dummy.m */,
+				42D03034D13A55FB9AF2B99B3B961294 /* Pods-Knocking Buddy-frameworks.sh */,
+				B2C159E905E87202AC84DA9FB1BC5060 /* Pods-Knocking Buddy-resources.sh */,
+				A60A5B0AEF0EAA6A81757E4723AAADA5 /* Pods-Knocking Buddy-umbrella.h */,
+				5BD095AA9C0DAEE38DC60C3416185F93 /* Pods-Knocking Buddy.debug.xcconfig */,
+				D4C93CEF17722827FB1B983E0C0AD141 /* Pods-Knocking Buddy.release.xcconfig */,
+			);
+			name = "Pods-Knocking Buddy";
+			path = "Target Support Files/Pods-Knocking Buddy";
+			sourceTree = "<group>";
+		};
+		20EA4B4E0E006E03E264896D6724FB55 /* Pods-Knocking BuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				0CC18A761B477367A37CC2B3860EE546 /* Info.plist */,
+				6500D01FBA715FA7B3D52CEA67E09B0C /* Pods-Knocking BuddyTests.modulemap */,
+				13D40FE8B67AADF43E8677B8E7C3E42D /* Pods-Knocking BuddyTests-acknowledgements.markdown */,
+				68C09C167C85D384389802858CDFE014 /* Pods-Knocking BuddyTests-acknowledgements.plist */,
+				ED8E0B1BFE705EC8B578204A8A50D7D4 /* Pods-Knocking BuddyTests-dummy.m */,
+				3ACF10F34CBF58D1227A0EA552CB797B /* Pods-Knocking BuddyTests-frameworks.sh */,
+				74360D66C2AFAB7A4653175ED1CC129A /* Pods-Knocking BuddyTests-resources.sh */,
+				6515950AA01133611119B566771119C5 /* Pods-Knocking BuddyTests-umbrella.h */,
+				BC0487A9437A10C5FEF6379071D4546A /* Pods-Knocking BuddyTests.debug.xcconfig */,
+				F1E06539ED7869AE7A7D5C708335133A /* Pods-Knocking BuddyTests.release.xcconfig */,
+			);
+			name = "Pods-Knocking BuddyTests";
+			path = "Target Support Files/Pods-Knocking BuddyTests";
+			sourceTree = "<group>";
+		};
+		2723816D7E40AA1E44C9DC182470B965 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A12A0118120C8AB0E6F40BFB9B19E44 /* Pods-Knocking Buddy */,
+				20EA4B4E0E006E03E264896D6724FB55 /* Pods-Knocking BuddyTests */,
+				5A2269E6D593F96D7A26356C5318C229 /* Pods-Knocking BuddyUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2B65642BD413896DA6F20651A9EBDCA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE11BC7F8B3127840B044F7631D9020C /* CircleSlider */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5A2269E6D593F96D7A26356C5318C229 /* Pods-Knocking BuddyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0F94EC9A40778C9DA437F3A1586BB66F /* Info.plist */,
+				591AC5E77D48596FC83A2B3E63567398 /* Pods-Knocking BuddyUITests.modulemap */,
+				9518FD20A17D739AF7A59A5B3486ADDA /* Pods-Knocking BuddyUITests-acknowledgements.markdown */,
+				302BA98AE676BCB120F99F9CAE906592 /* Pods-Knocking BuddyUITests-acknowledgements.plist */,
+				3ABBD6BC342F0E948C1648BEBB47B718 /* Pods-Knocking BuddyUITests-dummy.m */,
+				70E4EAC6FD8DB5FF3188C947FEBBEEAC /* Pods-Knocking BuddyUITests-frameworks.sh */,
+				9418B2519F25D4E92CB745EEA451357A /* Pods-Knocking BuddyUITests-resources.sh */,
+				C187DB9DF1EE8D045F597559CDBE4F61 /* Pods-Knocking BuddyUITests-umbrella.h */,
+				6A73E95AFA0668BF961A6A7EEBF6F47D /* Pods-Knocking BuddyUITests.debug.xcconfig */,
+				16734A4C9CF833EE06591ED2B34B4372 /* Pods-Knocking BuddyUITests.release.xcconfig */,
+			);
+			name = "Pods-Knocking BuddyUITests";
+			path = "Target Support Files/Pods-Knocking BuddyUITests";
+			sourceTree = "<group>";
+		};
+		6D0CB706A1318B3DF1422EEB5E7BE3AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6A6A44CCFCC8F325876FF3CD76C8401 /* CircleSlider.framework */,
+				91AD9B626C9AD4C43D060676CA94208F /* Pods_Knocking_Buddy.framework */,
+				D994FEA8D133D803DF835207542D5E63 /* Pods_Knocking_BuddyTests.framework */,
+				9F2B63FA9BAD5E4CE4D3608B934B38C2 /* Pods_Knocking_BuddyUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				2B65642BD413896DA6F20651A9EBDCA9 /* Pods */,
+				6D0CB706A1318B3DF1422EEB5E7BE3AE /* Products */,
+				2723816D7E40AA1E44C9DC182470B965 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A130E17CC1109448B5C63CFAB37F59D6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8660DC704F57CF6FD159AB113FC93C2A /* CircleSlider.modulemap */,
+				2917367D3D05E19FC00522CDFAA309B7 /* CircleSlider.xcconfig */,
+				7AB21DB03F3DED8ECB80EC9EDCC6A74D /* CircleSlider-dummy.m */,
+				FC2366498053F775256A610DEFBE28F0 /* CircleSlider-prefix.pch */,
+				44E8ABAE002393F407D69DB697401B91 /* CircleSlider-umbrella.h */,
+				F3DCB2FCB7B6B4523F50C669BC706BF6 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CircleSlider";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE11BC7F8B3127840B044F7631D9020C /* CircleSlider */ = {
+			isa = PBXGroup;
+			children = (
+				A3DAD9D05E1F6543F1184D184659EA07 /* CircleSlider.swift */,
+				D7662E06A3CF7275612583C1BD30D02F /* Math.swift */,
+				6204E64AE2F11111C42E846325DDDF52 /* TrackLayer.swift */,
+				A130E17CC1109448B5C63CFAB37F59D6 /* Support Files */,
+			);
+			path = CircleSlider;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2293DD5AEE774897BCD114AC29EAA521 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				993DF44138AA56E195BF57614240F11F /* CircleSlider-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		702BDA24887956FA6E080F055BD8C68D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D84B720452ED3338A13544DB35A1A8C /* Pods-Knocking Buddy-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52F30140FDD7D311E3CBBA29F3CB2D1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2846775AE4B851EEE4075F1FF4CD5569 /* Pods-Knocking BuddyTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA781C17D7EA912934D84FA26FA8E024 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6A5A850521A38D308EF40FCF6E57068 /* Pods-Knocking BuddyUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2877EC22006BF901871EFA5D7FC0DDA0 /* Pods-Knocking Buddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C1794E87794ED25B4633664E8D647D4 /* Build configuration list for PBXNativeTarget "Pods-Knocking Buddy" */;
+			buildPhases = (
+				F0C96F0772A7A5ED8A0331C7D66B3C0A /* Sources */,
+				9E06C8EFBD5132CC3AF76A81DF7443B1 /* Frameworks */,
+				702BDA24887956FA6E080F055BD8C68D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				895A2961BD9551F02A5BA5512F759C2F /* PBXTargetDependency */,
+			);
+			name = "Pods-Knocking Buddy";
+			productName = "Pods-Knocking Buddy";
+			productReference = 91AD9B626C9AD4C43D060676CA94208F /* Pods_Knocking_Buddy.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		456FD6B8B78D5DE4DE3E1310E2E56FA5 /* Pods-Knocking BuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 496F633F8426C91B14C400735BA2E966 /* Build configuration list for PBXNativeTarget "Pods-Knocking BuddyTests" */;
+			buildPhases = (
+				4BEAB7D0EA16AFDB0D6620E33B28DE5A /* Sources */,
+				8AF8E9A0DF4E4BA1104892A83771AD65 /* Frameworks */,
+				C52F30140FDD7D311E3CBBA29F3CB2D1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Knocking BuddyTests";
+			productName = "Pods-Knocking BuddyTests";
+			productReference = D994FEA8D133D803DF835207542D5E63 /* Pods_Knocking_BuddyTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5ED1961DDCDE947A06DC8C16287018D5 /* CircleSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40C53838C021D1F495B6F504004D016A /* Build configuration list for PBXNativeTarget "CircleSlider" */;
+			buildPhases = (
+				70030D04AB719AA1E73492513A93FF08 /* Sources */,
+				D2B251B68B9AA2D12F8DCA3FD4D09E22 /* Frameworks */,
+				2293DD5AEE774897BCD114AC29EAA521 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircleSlider;
+			productName = CircleSlider;
+			productReference = C6A6A44CCFCC8F325876FF3CD76C8401 /* CircleSlider.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		98418A9E8E8105A87602586CF384364C /* Pods-Knocking BuddyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD552DC4FED1549C9D5A08C49407EAAB /* Build configuration list for PBXNativeTarget "Pods-Knocking BuddyUITests" */;
+			buildPhases = (
+				044334618B470D688CFE33F92CD82630 /* Sources */,
+				33AFE01BB588E68454EC4588FA5EB3C3 /* Frameworks */,
+				FA781C17D7EA912934D84FA26FA8E024 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Knocking BuddyUITests";
+			productName = "Pods-Knocking BuddyUITests";
+			productReference = 9F2B63FA9BAD5E4CE4D3608B934B38C2 /* Pods_Knocking_BuddyUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6D0CB706A1318B3DF1422EEB5E7BE3AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5ED1961DDCDE947A06DC8C16287018D5 /* CircleSlider */,
+				2877EC22006BF901871EFA5D7FC0DDA0 /* Pods-Knocking Buddy */,
+				456FD6B8B78D5DE4DE3E1310E2E56FA5 /* Pods-Knocking BuddyTests */,
+				98418A9E8E8105A87602586CF384364C /* Pods-Knocking BuddyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		044334618B470D688CFE33F92CD82630 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE28949EEF950917F8B6F9970C69CFA9 /* Pods-Knocking BuddyUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BEAB7D0EA16AFDB0D6620E33B28DE5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C52877DE87B06A16FFC266872E94CDC /* Pods-Knocking BuddyTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70030D04AB719AA1E73492513A93FF08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E4247F782B00E0C8A4EFA4FB69BAAA0 /* CircleSlider-dummy.m in Sources */,
+				52AA8A18B25CC7793C6EDE7AE1895189 /* CircleSlider.swift in Sources */,
+				2CDCBD01E34DD403BA52DE2BE7AEB33A /* Math.swift in Sources */,
+				DF5B208728F7848D3C2EDCAB75284978 /* TrackLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0C96F0772A7A5ED8A0331C7D66B3C0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40CE73B54FE02549F6D96B38320168BB /* Pods-Knocking Buddy-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		895A2961BD9551F02A5BA5512F759C2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CircleSlider;
+			target = 5ED1961DDCDE947A06DC8C16287018D5 /* CircleSlider */;
+			targetProxy = A43E9FDF51DC4608ABF243CE052DE590 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		034014829C1E4434983CF3A690C12017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		23EBDEB76CC61150C523AA92034FE5C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BD095AA9C0DAEE38DC60C3416185F93 /* Pods-Knocking Buddy.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Knocking Buddy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Knocking Buddy/Pods-Knocking Buddy.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Knocking_Buddy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		505A65C1A2C339D810E98001BC622535 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2917367D3D05E19FC00522CDFAA309B7 /* CircleSlider.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CircleSlider/CircleSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CircleSlider/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CircleSlider/CircleSlider.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CircleSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		55861CC454DEB85ABFA647FD927F0541 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC0487A9437A10C5FEF6379071D4546A /* Pods-Knocking BuddyTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Knocking BuddyTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Knocking BuddyTests/Pods-Knocking BuddyTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Knocking_BuddyTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6D1AE9477D93DBD3BACFEC7FE3AC1F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4C93CEF17722827FB1B983E0C0AD141 /* Pods-Knocking Buddy.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Knocking Buddy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Knocking Buddy/Pods-Knocking Buddy.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Knocking_Buddy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9F7EC7523BE27A2CE9A32896C1444DCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A73E95AFA0668BF961A6A7EEBF6F47D /* Pods-Knocking BuddyUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Knocking BuddyUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Knocking BuddyUITests/Pods-Knocking BuddyUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Knocking_BuddyUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE166F41F62C84C3442B21069ABD808B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1E06539ED7869AE7A7D5C708335133A /* Pods-Knocking BuddyTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Knocking BuddyTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Knocking BuddyTests/Pods-Knocking BuddyTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Knocking_BuddyTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D783EB35F40E2203FBB952A0DECC68DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16734A4C9CF833EE06591ED2B34B4372 /* Pods-Knocking BuddyUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Knocking BuddyUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Knocking BuddyUITests/Pods-Knocking BuddyUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Knocking_BuddyUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E235E3852EBAC14F6B49D4DF7EDDF8E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2917367D3D05E19FC00522CDFAA309B7 /* CircleSlider.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CircleSlider/CircleSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CircleSlider/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CircleSlider/CircleSlider.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CircleSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C1794E87794ED25B4633664E8D647D4 /* Build configuration list for PBXNativeTarget "Pods-Knocking Buddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23EBDEB76CC61150C523AA92034FE5C3 /* Debug */,
+				6D1AE9477D93DBD3BACFEC7FE3AC1F46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034014829C1E4434983CF3A690C12017 /* Debug */,
+				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40C53838C021D1F495B6F504004D016A /* Build configuration list for PBXNativeTarget "CircleSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E235E3852EBAC14F6B49D4DF7EDDF8E5 /* Debug */,
+				505A65C1A2C339D810E98001BC622535 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		496F633F8426C91B14C400735BA2E966 /* Build configuration list for PBXNativeTarget "Pods-Knocking BuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55861CC454DEB85ABFA647FD927F0541 /* Debug */,
+				CE166F41F62C84C3442B21069ABD808B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD552DC4FED1549C9D5A08C49407EAAB /* Build configuration list for PBXNativeTarget "Pods-Knocking BuddyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F7EC7523BE27A2CE9A32896C1444DCD /* Debug */,
+				D783EB35F40E2203FBB952A0DECC68DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
