@@ -8,15 +8,26 @@
 
 import UIKit
 
+
+
+
+var timer = NSTimer()
+var sales = 0.0
+var salesGoal = 4.0
+var timeWorkedInHoursDouble = 0.00
+var timeWorkedGoal = 0.60
+var doughnutWidth = 150
+var salesComparedToGoal = 0.33
+var doorsComparedToGoal = 0.06
+
+
+
+
+
+
 class ViewController: UIViewController {
     
-    var timer = NSTimer()
-    var sales = 0
-    var salesGoal = 2
-    var timeWorkedGoal = 0.01
-    var doughnutWidth = 150
-    var salesComparedToGoal = 0.33
-    var doorsComparedToGoal = 0.06
+
     
     var salesInfo: [String: Array<String>] = [:]
     var daysInfo: [String: Array<Int>] = [:] // [Distance, Hours, Sales, Doors]
@@ -159,6 +170,7 @@ class ViewController: UIViewController {
     
     
     
+    
     //-----Sales--------
     
     
@@ -237,7 +249,7 @@ class ViewController: UIViewController {
             circleLayer.lineWidth = 5.0;
             
             // Don't draw the circle initially
-            circleLayer.strokeEnd = 0.2
+            circleLayer.strokeEnd = CGFloat(sales/salesGoal)
             
             
             // Add the circleLayer to the view's layer's sublayers
@@ -264,6 +276,112 @@ class ViewController: UIViewController {
         view.addSubview(circleView)
     }
 
+    
+    
+
+    //----Time Worked--------
+    
+    class TimeWorkedCircleViewBackground: UIView {
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.backgroundColor = UIColor.clearColor()
+            
+            // Use UIBezierPath as an easy way to create the CGPath for the layer.
+            // The path should be the entire circle.
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            
+            // Setup the CAShapeLayer with the path, colors, and line width
+            
+            let circleLayer: CAShapeLayer!
+            
+            
+            circleLayer = CAShapeLayer()
+            circleLayer.path = circlePath.CGPath
+            circleLayer.fillColor = UIColor.clearColor().CGColor
+            circleLayer.strokeColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1.0).CGColor
+            circleLayer.lineWidth = 5.0;
+            
+            // Don't draw the circle initially
+            circleLayer.strokeEnd = 1.0
+            
+            // Add the circleLayer to the view's layer's sublayers
+            layer.addSublayer(circleLayer)
+        }
+        
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+            
+            
+        }
+        
+    }
+    
+    
+    func addTimeWorkedCircleViewBackground() {
+        let diceRoll = CGFloat(Int(arc4random_uniform(7))*50)
+        let circleWidth = CGFloat(200)
+        let circleHeight = circleWidth
+        // Create a new CircleView
+        //var circleView = CircleView(frame: CGRectMake(diceRoll, 0, circleWidth, circleHeight))
+        let circleView = TimeWorkedCircleViewBackground(frame: CGRectMake((timeWorkedBox.frame.origin.x + 5), (timeWorkedBox.frame.origin.y + 30), CGFloat(doughnutWidth), CGFloat(doughnutWidth)))
+        
+        view.addSubview(circleView)
+    }
+    
+    
+    
+    
+    
+    
+    class TimeWorkedCircleView: UIView {
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.backgroundColor = UIColor.clearColor()
+            
+            // Use UIBezierPath as an easy way to create the CGPath for the layer.
+            // The path should be the entire circle.
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            
+            // Setup the CAShapeLayer with the path, colors, and line width
+            
+            let circleLayer: CAShapeLayer!
+            
+            
+            circleLayer = CAShapeLayer()
+            circleLayer.path = circlePath.CGPath
+            circleLayer.fillColor = UIColor.clearColor().CGColor
+            circleLayer.strokeColor = UIColor(red: 0/255, green: 174/255, blue: 239/255, alpha: 1.0).CGColor
+            circleLayer.lineWidth = 5.0;
+            
+            // Don't draw the circle initially - I need to figure out where to put things
+            circleLayer.strokeEnd = CGFloat(timeWorkedInHoursDouble/timeWorkedGoal)
+            
+            // Add the circleLayer to the view's layer's sublayers
+            layer.addSublayer(circleLayer)
+        }
+        
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+            
+            
+        }
+        
+    }
+    
+    
+    func addTimeWorkedCircleView() {
+        let diceRoll = CGFloat(Int(arc4random_uniform(7))*50)
+        let circleWidth = CGFloat(200)
+        let circleHeight = circleWidth
+        // Create a new CircleView
+        //var circleView = CircleView(frame: CGRectMake(diceRoll, 0, circleWidth, circleHeight))
+        let circleView = TimeWorkedCircleView(frame: CGRectMake((timeWorkedBox.frame.origin.x + 5), (timeWorkedBox.frame.origin.y + 30), CGFloat(doughnutWidth), CGFloat(doughnutWidth)))
+        
+        view.addSubview(circleView)
+    }
+    
     
     
 
@@ -396,6 +514,8 @@ class ViewController: UIViewController {
         addDoorsKnockedCircleView()
         addSalesCircleViewBackground()
         addSalesCircleView()
+        addTimeWorkedCircleViewBackground()
+        addTimeWorkedCircleView()
 
         
         //second += 1
@@ -406,7 +526,8 @@ class ViewController: UIViewController {
         
         let timeWorked = second/3600.0
         
-        let timeWorkedInHours = (String(format:"%.02f", timeWorked))
+        var timeWorkedInHours = (String(format:"%.02f", timeWorked))
+        timeWorkedInHoursDouble = Double(timeWorkedInHours)!
         
         timeWorkedLabel.text = "\(timeWorkedInHours)"
         
