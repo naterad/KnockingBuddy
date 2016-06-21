@@ -15,7 +15,7 @@ var timer = NSTimer()
 var sales = 0.0
 var salesGoal = 4.0
 var timeWorkedInHoursDouble = 0.00
-var timeWorkedGoal = 0.60
+var timeWorkedGoal = 0.10
 var doughnutWidth = 150
 var salesComparedToGoal = 0.33
 var doorsComparedToGoal = 0.06
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
             
             // Use UIBezierPath as an easy way to create the CGPath for the layer.
             // The path should be the entire circle.
-            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat((M_PI * 2.0) - M_PI_2), clockwise: true)
             
             // Setup the CAShapeLayer with the path, colors, and line width
             
@@ -127,7 +127,7 @@ class ViewController: UIViewController {
             
             // Use UIBezierPath as an easy way to create the CGPath for the layer.
             // The path should be the entire circle.
-            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat((M_PI * 2.0) - M_PI_2), clockwise: true)
             
             // Setup the CAShapeLayer with the path, colors, and line width
             
@@ -182,7 +182,7 @@ class ViewController: UIViewController {
             
             // Use UIBezierPath as an easy way to create the CGPath for the layer.
             // The path should be the entire circle.
-            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat((M_PI * 2.0) - M_PI_2), clockwise: true)
             
             // Setup the CAShapeLayer with the path, colors, and line width
             
@@ -235,7 +235,7 @@ class ViewController: UIViewController {
             
             // Use UIBezierPath as an easy way to create the CGPath for the layer.
             // The path should be the entire circle.
-            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat((M_PI * 2.0) - M_PI_2), clockwise: true)
             
             // Setup the CAShapeLayer with the path, colors, and line width
             
@@ -289,7 +289,7 @@ class ViewController: UIViewController {
             
             // Use UIBezierPath as an easy way to create the CGPath for the layer.
             // The path should be the entire circle.
-            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat((M_PI * 2.0) - M_PI_2), clockwise: true)
             
             // Setup the CAShapeLayer with the path, colors, and line width
             
@@ -342,7 +342,7 @@ class ViewController: UIViewController {
             
             // Use UIBezierPath as an easy way to create the CGPath for the layer.
             // The path should be the entire circle.
-            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.5, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat((M_PI * 2.0) - M_PI_2), clockwise: true)
             
             // Setup the CAShapeLayer with the path, colors, and line width
             
@@ -385,10 +385,113 @@ class ViewController: UIViewController {
     
     
 
+    
 
     
     
+    //----DistanceWalked--------
     
+    class DistanceWalkedCircleViewBackground: UIView {
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.backgroundColor = UIColor.clearColor()
+            
+            // Use UIBezierPath as an easy way to create the CGPath for the layer.
+            // The path should be the entire circle.
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat((M_PI * 2.0) - M_PI_2), clockwise: true)
+            
+            // Setup the CAShapeLayer with the path, colors, and line width
+            
+            let circleLayer: CAShapeLayer!
+            
+            
+            circleLayer = CAShapeLayer()
+            circleLayer.path = circlePath.CGPath
+            circleLayer.fillColor = UIColor.clearColor().CGColor
+            circleLayer.strokeColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1.0).CGColor
+            circleLayer.lineWidth = 5.0;
+            
+            // Don't draw the circle initially
+            circleLayer.strokeEnd = 1.0
+            
+            // Add the circleLayer to the view's layer's sublayers
+            layer.addSublayer(circleLayer)
+        }
+        
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+            
+            
+        }
+        
+    }
+    
+    
+    func addDistanceWalkedCircleViewBackground() {
+        let diceRoll = CGFloat(Int(arc4random_uniform(7))*50)
+        let circleWidth = CGFloat(200)
+        let circleHeight = circleWidth
+        // Create a new CircleView
+        //var circleView = CircleView(frame: CGRectMake(diceRoll, 0, circleWidth, circleHeight))
+        let circleView = DistanceWalkedCircleViewBackground(frame: CGRectMake((distanceWalkedBox.frame.origin.x + 5), (distanceWalkedBox.frame.origin.y + 30), CGFloat(doughnutWidth), CGFloat(doughnutWidth)))
+        
+        view.addSubview(circleView)
+    }
+    
+    
+    
+    
+    
+    
+    class DistanceWalkedCircleView: UIView {
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.backgroundColor = UIColor.clearColor()
+            
+            // Use UIBezierPath as an easy way to create the CGPath for the layer.
+            // The path should be the entire circle.
+            let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat((M_PI * 2.0) - M_PI_2), clockwise: true)
+            
+            // Setup the CAShapeLayer with the path, colors, and line width
+            
+            let circleLayer: CAShapeLayer!
+            
+            
+            circleLayer = CAShapeLayer()
+            circleLayer.path = circlePath.CGPath
+            circleLayer.fillColor = UIColor.clearColor().CGColor
+            circleLayer.strokeColor = UIColor(red: 28/255, green: 117/255, blue: 188/255, alpha: 1.0).CGColor
+            circleLayer.lineWidth = 5.0;
+            
+            // Don't draw the circle initially - I need to figure out where to put things
+            circleLayer.strokeEnd = 0.1
+            
+            // Add the circleLayer to the view's layer's sublayers
+            layer.addSublayer(circleLayer)
+        }
+        
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+            
+            
+        }
+        
+    }
+    
+    
+    func addDistanceWalkedCircleView() {
+        let diceRoll = CGFloat(Int(arc4random_uniform(7))*50)
+        let circleWidth = CGFloat(200)
+        let circleHeight = circleWidth
+        // Create a new CircleView
+        //var circleView = CircleView(frame: CGRectMake(diceRoll, 0, circleWidth, circleHeight))
+        let circleView = DistanceWalkedCircleView(frame: CGRectMake((distanceWalkedBox.frame.origin.x + 5), (distanceWalkedBox.frame.origin.y + 30), CGFloat(doughnutWidth), CGFloat(doughnutWidth)))
+        
+        view.addSubview(circleView)
+    }
+
     
     
     
@@ -472,6 +575,19 @@ class ViewController: UIViewController {
         distanceWalkedBox.layer.borderColor = UIColor.lightGrayColor().CGColor
         distanceWalkedBox.layer.cornerRadius = 2
         
+        
+        
+       /* doughnutWidth = Int(doorsKnockedBox.frame.width) - 10
+        addDoorsKnockedCircleViewBackground()
+        addSalesCircleViewBackground()
+        addTimeWorkedCircleViewBackground()
+        addDistanceWalkedCircleViewBackground()  */
+
+    
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -516,6 +632,8 @@ class ViewController: UIViewController {
         addSalesCircleView()
         addTimeWorkedCircleViewBackground()
         addTimeWorkedCircleView()
+        addDistanceWalkedCircleViewBackground()
+        addDistanceWalkedCircleView()
 
         
         //second += 1
@@ -568,13 +686,13 @@ class ViewController: UIViewController {
         if timeWorked >= timeWorkedGoal {
             //timeWorkedBox.layer.borderColor = UIColor.greenColor().CGColor
             
-            timeWorkedBox.backgroundColor = UIColor(red: 57/255, green: 181/255, blue: 74/255, alpha: 0.2)
+            timeWorkedBox.backgroundColor = UIColor(red: 0/255, green: 174/255, blue: 239/255, alpha: 0.2)
         }
         
         if sales >= salesGoal {
         //salesBox.layer.borderColor = UIColor.greenColor().CGColor
             
-            salesBox.backgroundColor = UIColor(red: 57/255, green: 181/255, blue: 74/255, alpha: 0.2)
+            salesBox.backgroundColor = UIColor(red: 0/255, green: 157/255, blue: 167/255, alpha: 0.2)
         }
         
         
