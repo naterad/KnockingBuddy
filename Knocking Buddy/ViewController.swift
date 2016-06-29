@@ -12,13 +12,16 @@ import UIKit
 
 
 var timer = NSTimer()
-var sales = 0.0
-var salesGoal = 4.0
+var sales = 0
+var salesGoal = 4
 var timeWorkedInHoursDouble = 0.00
 var timeWorkedGoal = 0.10
 var doughnutWidth = 150
 var salesComparedToGoal = 0.33
 var doorsComparedToGoal = 0.06
+
+
+
 
 
 
@@ -38,6 +41,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeWorkedBox: UILabel!
     @IBOutlet weak var salesBox: UILabel!
     @IBOutlet weak var numberOfSalesLabel: UILabel!
+    @IBOutlet weak var salesGoalNumber: UILabel!
     @IBOutlet weak var minusOneSale: UIButton!
 
     @IBOutlet weak var timerLabel: UILabel!
@@ -558,6 +562,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
+        timeWorkedGoalNumber.text = "\(timeWorkedGoal)"
+        salesGoalNumber.text = "\(salesGoal)"
+        
         
         doorsKnockedBox.layer.borderWidth = 0.5
         doorsKnockedBox.layer.borderColor = UIColor.lightGrayColor().CGColor
@@ -706,6 +713,99 @@ class ViewController: UIViewController {
     }
     
     
+    //-------------------Resetting the goals----------------
+    
+    
+    
+    
+    //-----Time Worked----
+    
+    
+    
+    
+    @IBAction func resetTimeWorkedGoalButton(sender: AnyObject) {
+        var timeWorkedAlert = UIAlertController(title: "Time Worked", message: "Your current work time goal is \(timeWorkedGoal) hours – Enter your new goal.", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        timeWorkedAlert.addTextFieldWithConfigurationHandler {
+            (textField) in
+        }
+        
+        timeWorkedAlert.addAction(UIAlertAction(title: "Submit", style: .Default, handler: {
+            (action) in
+            
+            let textF = timeWorkedAlert.textFields![0] as UITextField
+            print(textF)
+            
+            textF.keyboardType = UIKeyboardType.NumberPad
+            
+            let timeWorkedGoalFromAlert = Double(textF.text!)
+            
+            
+            timeWorkedGoal = timeWorkedGoalFromAlert!
+            
+            print(timeWorkedGoal)
+            self.timeWorkedGoalNumber.text = "\(timeWorkedGoal)"
+            
+        }))
+        
+        timeWorkedAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: {
+            (action) in
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+            
+        }))
+        
+        self.presentViewController(timeWorkedAlert, animated: true, completion: nil)
+        
+    }
+    
+ 
+    
+    @IBAction func resetSalesGoalButton(sender: AnyObject) {
+        
+        var salesAlert = UIAlertController(title: "Sales", message: "Your current sales goal is \(salesGoal) sales – Enter your new goal.", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        salesAlert.addTextFieldWithConfigurationHandler {
+            (textField) in
+        }
+        
+        salesAlert.addAction(UIAlertAction(title: "Submit", style: .Default, handler: {
+            (action) in
+            
+            let textS = salesAlert.textFields![0] as UITextField
+            print(textS)
+            
+            textS.keyboardType = UIKeyboardType.NumberPad
+            
+            let salesGoalFromAlert = Int(textS.text!)
+            
+            
+            salesGoal = salesGoalFromAlert!
+            
+            print(salesGoal)
+            self.salesGoalNumber.text = "\(salesGoal)"
+            
+        }))
+        
+        salesAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: {
+            (action) in
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+            
+        }))
+        
+        self.presentViewController(salesAlert, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     @IBAction func startStopButton(sender: AnyObject) {
 
         
@@ -738,4 +838,10 @@ class ViewController: UIViewController {
             timer.invalidate()
         }
     }
+    
+    
+    
+    
+    
+    
 }
