@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreLocation
 
 
 
@@ -15,21 +15,23 @@ var timer = NSTimer()
 var sales = 0
 var salesGoal = 4
 var timeWorkedInHoursDouble = 0.00
-var timeWorkedGoal = 0.10
+var timeWorkedGoal = 0.25
 var doughnutWidth = 150
-var salesComparedToGoal = 0.33
-var doorsComparedToGoal = 0.06
+var doorsKnockedGoal = 200
+var doorsKnocked = 0
+var distanceWalked = 0.00
+var distanceWalkedGoal = 2.25
+var accumulatedTimeInSeconds = 0
+var second = 0.0
 
 
 
 
 
-
-
-
-
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    var locationManager: CLLocationManager = CLLocationManager()
+    var startLocation: CLLocation!
 
     
     var salesInfo: [String: Array<String>] = [:]
@@ -50,10 +52,57 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeWorkedLabel: UILabel!
     @IBOutlet weak var timeWorkedGoalNumber: UILabel!
     
+    @IBOutlet weak var doorsKnockedLabel: UILabel!
+    @IBOutlet weak var doorsKnockedGoalNumber: UILabel!
+    
+    @IBOutlet weak var distanceWalkedLabel: UILabel!
+    @IBOutlet weak var distanceWalkedGoalNumber: UILabel!
+    @IBOutlet weak var milesLabel: UILabel!
     
     
     
+    //--------------Location stuff---------------------
     
+    
+    func locationManager(manager: CLLocationManager!,
+                         didUpdateLocations locations: [CLLocation]!)
+    {
+        var latestLocation: AnyObject = locations[locations.count - 1]
+        
+        var latitude = String(format: "%.4f",
+                              latestLocation.coordinate.latitude)
+        var longitude = String(format: "%.4f",
+                               latestLocation.coordinate.longitude)
+        var horizontalAccuracy = String(format: "%.4f",
+                                        latestLocation.horizontalAccuracy)
+        var altitude = String(format: "%.4f",
+                              latestLocation.altitude)
+        var verticalAccuracy = String(format: "%.4f",
+                                      latestLocation.verticalAccuracy)
+        
+        
+        if startLocation == nil {
+            startLocation = latestLocation as! CLLocation
+        }
+        
+        var distanceBetween: CLLocationDistance =
+            latestLocation.distanceFromLocation(startLocation)
+        
+        var distance = String(format: "%.2f", distanceBetween)
+        
+        milesLabel.text = distance
+        
+        
+        print(latestLocation)
+        print(latitude)
+        print(longitude)
+        
+    }
+    
+    func locationManager(manager: CLLocationManager!,
+                         didFailWithError error: NSError!) {
+        
+    }
     
     
     
@@ -145,7 +194,7 @@ class ViewController: UIViewController {
             circleLayer.lineWidth = 5.0;
             
             // Don't draw the circle initially
-            circleLayer.strokeEnd = 0.3
+            circleLayer.strokeEnd = CGFloat(doorsKnocked/doorsKnockedGoal)
             
             // Add the circleLayer to the view's layer's sublayers
             layer.addSublayer(circleLayer)
@@ -362,6 +411,8 @@ class ViewController: UIViewController {
             // Don't draw the circle initially - I need to figure out where to put things
             circleLayer.strokeEnd = CGFloat(timeWorkedInHoursDouble/timeWorkedGoal)
             
+            
+            
             // Add the circleLayer to the view's layer's sublayers
             layer.addSublayer(circleLayer)
         }
@@ -470,7 +521,7 @@ class ViewController: UIViewController {
             circleLayer.lineWidth = 5.0;
             
             // Don't draw the circle initially - I need to figure out where to put things
-            circleLayer.strokeEnd = 0.1
+            circleLayer.strokeEnd = CGFloat(distanceWalked/distanceWalkedGoal)
             
             // Add the circleLayer to the view's layer's sublayers
             layer.addSublayer(circleLayer)
@@ -516,6 +567,7 @@ class ViewController: UIViewController {
         
         if sales >= 1 {
             minusOneSale.hidden = false
+            
         }
         
         let date = NSDate()
@@ -562,6 +614,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        startLocation = nil
+        
+        
+        distanceWalkedGoalNumber.text = "\(distanceWalkedGoal)"
+        doorsKnockedGoalNumber.text = "\(doorsKnockedGoal)"
         timeWorkedGoalNumber.text = "\(timeWorkedGoal)"
         salesGoalNumber.text = "\(salesGoal)"
         
@@ -602,6 +663,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     //----------Nates Testing Stuff---------
     
     func printSales(){
@@ -628,8 +690,12 @@ class ViewController: UIViewController {
     
     func timerResults(timer: NSTimer) {
         let timerStartDate = timer.userInfo as! NSDate
-        let second = Double(NSDate().timeIntervalSinceDate(timerStartDate))
-        //print(second)
+        second = Double(NSDate().timeIntervalSinceDate(timerStartDate)) + Double(accumulatedTimeInSeconds)
+        print(second)
+        
+        startLocation = nil
+        
+        
         
         
         doughnutWidth = Int(doorsKnockedBox.frame.width) - 10
@@ -654,6 +720,7 @@ class ViewController: UIViewController {
         var timeWorkedInHours = (String(format:"%.02f", timeWorked))
         timeWorkedInHoursDouble = Double(timeWorkedInHours)!
         
+        doorsKnockedLabel.text = "\(doorsKnocked)"
         timeWorkedLabel.text = "\(timeWorkedInHours)"
         
         if m == 0 || m == 1 || m == 2 {
@@ -693,13 +760,13 @@ class ViewController: UIViewController {
         if timeWorked >= timeWorkedGoal {
             //timeWorkedBox.layer.borderColor = UIColor.greenColor().CGColor
             
-            timeWorkedBox.backgroundColor = UIColor(red: 0/255, green: 174/255, blue: 239/255, alpha: 0.2)
+            timeWorkedBox.backgroundColor = UIColor(red: 57/255, green: 181/255, blue: 74/255, alpha: 0.2)
         }
         
         if sales >= salesGoal {
         //salesBox.layer.borderColor = UIColor.greenColor().CGColor
             
-            salesBox.backgroundColor = UIColor(red: 0/255, green: 157/255, blue: 167/255, alpha: 0.2)
+            salesBox.backgroundColor = UIColor(red: 57/255, green: 181/255, blue: 74/255, alpha: 0.2)
         }
         
         
@@ -708,12 +775,128 @@ class ViewController: UIViewController {
             
             salesBox.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         }
+        
+        if doorsKnocked >= doorsKnockedGoal {
+            //salesBox.layer.borderColor = UIColor.greenColor().CGColor
+            
+            doorsKnockedBox.backgroundColor = UIColor(red: 57/255, green: 181/255, blue: 74/255, alpha: 0.2)
+        }
+        
+        
+        if doorsKnocked < doorsKnockedGoal {
+            //salesBox.layer.borderColor = UIColor.greenColor().CGColor
+            
+            doorsKnockedBox.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        }
+        
+        if distanceWalked >= distanceWalkedGoal {
+            //salesBox.layer.borderColor = UIColor.greenColor().CGColor
+            
+            distanceWalkedBox.backgroundColor = UIColor(red: 57/255, green: 181/255, blue: 74/255, alpha: 0.2)
+        }
+        
+        
+        if distanceWalked < distanceWalkedGoal {
+            //salesBox.layer.borderColor = UIColor.greenColor().CGColor
+            
+            distanceWalkedBox.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        }
+
 
 
     }
     
     
     //-------------------Resetting the goals----------------
+    
+    
+    //-----Distance Walked-------
+    
+    @IBAction func resetDistanceWalkedGoalButton(sender: AnyObject) {
+        var distanceWalkedAlert = UIAlertController(title: "Distance Walked", message: "Current Goal: \(distanceWalkedGoal) miles – Enter a new goal. (e.g. '1.75')", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        distanceWalkedAlert.addTextFieldWithConfigurationHandler {
+            (textField) in
+        }
+        
+        distanceWalkedAlert.addAction(UIAlertAction(title: "Submit", style: .Default, handler: {
+            (action) in
+            
+            let textW = distanceWalkedAlert.textFields![0] as UITextField
+            print(textW)
+            
+            textW.keyboardType = UIKeyboardType.NumberPad
+            
+            let distanceWalkedGoalFromAlert = Double(textW.text!)
+            
+            
+            distanceWalkedGoal = distanceWalkedGoalFromAlert!
+            
+            print(distanceWalkedGoal)
+            self.distanceWalkedGoalNumber.text = "\(distanceWalkedGoal)"
+            
+        }))
+        
+        distanceWalkedAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: {
+            (action) in
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+            
+        }))
+        
+        self.presentViewController(distanceWalkedAlert, animated: true, completion: nil)
+        
+        
+
+    }
+    
+    
+    
+    
+    
+    
+    //-----Doors Knocked----
+    
+    
+    @IBAction func resetDoorsKnockedGoalButton(sender: AnyObject) {
+        var doorsKnockedAlert = UIAlertController(title: "Doors Knocked", message: "Current Goal: \(doorsKnockedGoal) doors – Enter a new goal. (e.g. '140')", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        doorsKnockedAlert.addTextFieldWithConfigurationHandler {
+            (textField) in
+        }
+        
+        doorsKnockedAlert.addAction(UIAlertAction(title: "Submit", style: .Default, handler: {
+            (action) in
+            
+            let textD = doorsKnockedAlert.textFields![0] as UITextField
+            print(textD)
+            
+            textD.keyboardType = UIKeyboardType.NumberPad
+            
+            let doorsKnockedGoalFromAlert = Double(textD.text!)
+            
+            
+            doorsKnockedGoal = Int(doorsKnockedGoalFromAlert!)
+            
+            print(doorsKnockedGoal)
+            self.doorsKnockedGoalNumber.text = "\(doorsKnockedGoal)"
+            
+        }))
+        
+        doorsKnockedAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: {
+            (action) in
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+            
+        }))
+        
+        self.presentViewController(doorsKnockedAlert, animated: true, completion: nil)
+
+        
+        
+    }
     
     
     
@@ -724,7 +907,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func resetTimeWorkedGoalButton(sender: AnyObject) {
-        var timeWorkedAlert = UIAlertController(title: "Time Worked", message: "Your current work time goal is \(timeWorkedGoal) hours – Enter your new goal.", preferredStyle: UIAlertControllerStyle.Alert)
+        var timeWorkedAlert = UIAlertController(title: "Time Worked", message: "Current Goal: \(timeWorkedGoal) hours – Enter a new goal. (e.g. '3.25')", preferredStyle: UIAlertControllerStyle.Alert)
         
         timeWorkedAlert.addTextFieldWithConfigurationHandler {
             (textField) in
@@ -760,11 +943,14 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
+    //----Sales------
  
     
     @IBAction func resetSalesGoalButton(sender: AnyObject) {
         
-        var salesAlert = UIAlertController(title: "Sales", message: "Your current sales goal is \(salesGoal) sales – Enter your new goal.", preferredStyle: UIAlertControllerStyle.Alert)
+        var salesAlert = UIAlertController(title: "Sales", message: "Current Goal: \(salesGoal) sales – Enter a new goal. (e.g. '2')", preferredStyle: UIAlertControllerStyle.Alert)
         
         salesAlert.addTextFieldWithConfigurationHandler {
             (textField) in
@@ -786,6 +972,9 @@ class ViewController: UIViewController {
             print(salesGoal)
             self.salesGoalNumber.text = "\(salesGoal)"
             
+            self.addSalesCircleViewBackground()
+            self.addSalesCircleView()
+            
         }))
         
         salesAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: {
@@ -806,6 +995,8 @@ class ViewController: UIViewController {
     
     
     
+    
+    
     @IBAction func startStopButton(sender: AnyObject) {
 
         
@@ -819,7 +1010,7 @@ class ViewController: UIViewController {
         let dateString = "\(month)\\\(day)\\\(year)"
         
         if updatingSymbol.hidden == true { //Start the timer
-            sender.setTitle("STOP", forState: UIControlState.Normal)
+            sender.setTitle("PAUSE", forState: UIControlState.Normal)
             updatingSymbol.hidden = false
             
             timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.timerResults(_:)) , userInfo: NSDate(), repeats: true)
@@ -836,6 +1027,7 @@ class ViewController: UIViewController {
             updatingSymbol.hidden = true
             //***stop the timer
             timer.invalidate()
+            accumulatedTimeInSeconds = Int(second)
         }
     }
     
